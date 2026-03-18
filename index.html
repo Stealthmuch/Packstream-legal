@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PackStream Privacy Policy</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 24px 20px 60px;
+      color: #1f2937;
+      background: #f9fafb;
+      line-height: 1.7;
+    }
+    h1 { font-size: 28px; color: #111827; margin-bottom: 4px; }
+    h2 { font-size: 18px; color: #111827; margin-top: 36px; border-bottom: 1px solid #e5e7eb; padding-bottom: 6px; }
+    p, li { font-size: 15px; color: #374151; }
+    ul { padding-left: 20px; }
+    a { color: #2563eb; }
+    .meta { font-size: 13px; color: #6b7280; margin-bottom: 32px; }
+    table { width: 100%; border-collapse: collapse; margin: 16px 0; font-size: 14px; }
+    th { background: #f3f4f6; text-align: left; padding: 10px 12px; border: 1px solid #e5e7eb; }
+    td { padding: 10px 12px; border: 1px solid #e5e7eb; vertical-align: top; }
+  </style>
+</head>
+<body>
+
+  <h1>Privacy Policy for PackStream</h1>
+  <p class="meta">Last updated: 20 February 2026</p>
+
+  <p>PackStream ("we", "our", or "us") is committed to protecting your privacy. This policy explains what information we collect, how we use it, and your rights regarding that information.</p>
+
+  <h2>1. Who We Are</h2>
+  <p>PackStream is developed and operated by Erick (an independent developer based in Melbourne, Australia). You can contact us at: <a href="mailto:packstreamsuite@gmail.com">packstreamsuite@gmail.com</a></p>
+
+  <h2>2. What Information We Collect</h2>
+
+  <h3>2.1 Account Information</h3>
+  <p>When you create an account, we collect:</p>
+  <ul>
+    <li>Your <strong>email address</strong></li>
+    <li>A <strong>password</strong> (stored securely via AWS Cognito — we never see your password in plain text)</li>
+  </ul>
+
+  <h3>2.2 Trip and Packing List Data</h3>
+  <p>When you create and save packing lists, we store:</p>
+  <ul>
+    <li>Trip details you enter (destination city names, travel dates, trip duration, planned activities)</li>
+    <li>The packing list items generated from your trip details</li>
+    <li>Your list names and any customisations you make</li>
+  </ul>
+  <p>This data is stored in our database (AWS DynamoDB, hosted in Sydney, Australia) and linked to your account.</p>
+
+  <h3>2.3 Location and Weather Data</h3>
+  <p>To generate weather-appropriate packing recommendations, we send your <strong>entered city names</strong> to the OpenWeather API (<a href="https://openweathermap.org" target="_blank">openweathermap.org</a>). We do not access your device's GPS or physical location. Please refer to <a href="https://openweather.co.uk/privacy-policy" target="_blank">OpenWeather's Privacy Policy</a> for how they handle this data.</p>
+
+  <h3>2.4 Local Cache Data</h3>
+  <p>PackStream caches your packing lists locally on your device to support offline use. This data is stored only on your device and is cleared when you log out or uninstall the app.</p>
+
+  <h3>2.5 What We Do NOT Collect</h3>
+  <ul>
+    <li>Analytics or usage tracking data</li>
+    <li>Device identifiers or advertising IDs</li>
+    <li>Crash reports or diagnostic telemetry</li>
+    <li>Payment information (the app is currently free)</li>
+    <li>Any data from your contacts, camera, microphone, or other device sensors</li>
+  </ul>
+
+  <h2>3. How We Use Your Information</h2>
+  <p>We use the information we collect solely to:</p>
+  <ul>
+    <li>Authenticate you and secure your account</li>
+    <li>Store and retrieve your saved packing lists across devices</li>
+    <li>Generate weather-based packing recommendations for your trips</li>
+    <li>Allow you to share your packing lists (only when you explicitly choose to do so)</li>
+  </ul>
+  <p>We do not use your data for advertising, profiling, or any purpose beyond operating the app.</p>
+
+  <h2>4. How We Share Your Information</h2>
+  <p>We do not sell, rent, or trade your personal information. We share data only with the following third-party services necessary to operate the app:</p>
+
+  <table>
+    <tr>
+      <th>Service</th>
+      <th>Purpose</th>
+      <th>Data Shared</th>
+      <th>Region</th>
+    </tr>
+    <tr>
+      <td>AWS Cognito</td>
+      <td>User authentication</td>
+      <td>Email address</td>
+      <td>Sydney, AU (ap-southeast-2)</td>
+    </tr>
+    <tr>
+      <td>AWS DynamoDB</td>
+      <td>Storing packing lists</td>
+      <td>Trip and list data</td>
+      <td>Sydney, AU (ap-southeast-2)</td>
+    </tr>
+    <tr>
+      <td>AWS API Gateway + Lambda</td>
+      <td>App backend</td>
+      <td>Trip and list data</td>
+      <td>Sydney, AU (ap-southeast-2)</td>
+    </tr>
+    <tr>
+      <td>OpenWeather API</td>
+      <td>Weather data</td>
+      <td>City names you enter</td>
+      <td>EU (OpenWeather servers)</td>
+    </tr>
+  </table>
+
+  <h2>5. Data Retention</h2>
+  <ul>
+    <li><strong>Account data</strong> is retained for as long as your account is active.</li>
+    <li><strong>Packing list data</strong> is retained until you delete individual lists or delete your account.</li>
+    <li>You can delete your packing lists at any time from within the app.</li>
+    <li>To request full account deletion, contact us at <a href="mailto:packstreamsuite@gmail.com">packstreamsuite@gmail.com</a> and we will delete your data within 30 days.</li>
+  </ul>
+
+  <h2>6. Data Security</h2>
+  <ul>
+    <li>Passwords are managed by AWS Cognito and are never stored or visible to us</li>
+    <li>All data in transit is encrypted using HTTPS/TLS</li>
+    <li>AWS infrastructure is secured using industry-standard access controls</li>
+    <li>Your account data is stored in Australia</li>
+  </ul>
+  <p>No method of electronic storage or transmission is 100% secure. We cannot guarantee absolute security, but we are committed to using best practices.</p>
+
+  <h2>7. Children's Privacy</h2>
+  <p>PackStream is not directed at children under the age of 13. We do not knowingly collect personal information from children under 13. If you believe a child has provided us with personal information, please contact us and we will delete it promptly.</p>
+
+  <h2>8. Your Rights</h2>
+  <p>Depending on your location, you may have rights regarding your personal data, including:</p>
+  <ul>
+    <li><strong>Access:</strong> Request a copy of the data we hold about you</li>
+    <li><strong>Correction:</strong> Ask us to correct inaccurate data</li>
+    <li><strong>Deletion:</strong> Request deletion of your account and associated data</li>
+    <li><strong>Portability:</strong> Request your packing list data in a portable format</li>
+  </ul>
+  <p>To exercise any of these rights, contact us at <a href="mailto:packstreamsuite@gmail.com">packstreamsuite@gmail.com</a>.</p>
+  <p>If you are located in Australia, you may also lodge a complaint with the <a href="https://www.oaic.gov.au/" target="_blank">Office of the Australian Information Commissioner (OAIC)</a> if you believe your privacy rights have been breached.</p>
+
+  <h2>9. Changes to This Policy</h2>
+  <p>We may update this privacy policy from time to time. When we do, we will update the "Last updated" date at the top of this page. For significant changes, we will notify you within the app. Continued use of PackStream after changes are posted constitutes your acceptance of the updated policy.</p>
+
+  <h2>10. Contact Us</h2>
+  <p>If you have any questions about this privacy policy or how we handle your data, please contact:</p>
+  <p>
+    <strong>Erick</strong><br />
+    Email: <a href="mailto:packstreamsuite@gmail.com">packstreamsuite@gmail.com</a><br />
+    Location: Melbourne, Victoria, Australia
+  </p>
+
+</body>
+</html>
