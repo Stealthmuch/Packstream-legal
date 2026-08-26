@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SkinStream Privacy Policy</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 24px 20px 60px;
+      color: #1f2937;
+      background: #f9fafb;
+      line-height: 1.7;
+    }
+    h1 { font-size: 28px; color: #111827; margin-bottom: 4px; }
+    h2 { font-size: 18px; color: #111827; margin-top: 36px; border-bottom: 1px solid #e5e7eb; padding-bottom: 6px; }
+    p, li { font-size: 15px; color: #374151; }
+    ul { padding-left: 20px; }
+    a { color: #059669; }
+    .meta { font-size: 13px; color: #6b7280; margin-bottom: 32px; }
+    table { width: 100%; border-collapse: collapse; margin: 16px 0; font-size: 14px; }
+    th { background: #f3f4f6; text-align: left; padding: 10px 12px; border: 1px solid #e5e7eb; }
+    td { padding: 10px 12px; border: 1px solid #e5e7eb; vertical-align: top; }
+    .disclaimer {
+      background: #ecfdf5; border: 1px solid #a7f3d0;
+      border-radius: 10px; padding: 16px 20px; margin: 24px 0;
+      font-size: 14px; color: #065f46;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Privacy Policy for SkinStream</h1>
+  <p class="meta">Last updated: 26 August 2026</p>
+
+  <p>SkinStream ("we", "our", or "us") is committed to protecting your privacy. This policy explains what information we collect, how we use it, and your rights regarding that information.</p>
+
+  <div class="disclaimer">
+    🌿 SkinStream provides general skincare guidance only. It is not medical advice, and skin condition tags you add (e.g. "acne-prone") are used only to filter recommendations — they are not stored or treated as a medical record.
+  </div>
+
+  <h2>1. Who We Are</h2>
+  <p>SkinStream is developed and operated by Erick (an independent developer based in Melbourne, Australia), and is part of the same app suite as PackStream. You can contact us at: <a href="mailto:packstreamsuite@gmail.com">packstreamsuite@gmail.com</a></p>
+
+  <h2>2. What Information We Collect</h2>
+
+  <h3>2.1 Account Information</h3>
+  <p>When you create an account, we collect:</p>
+  <ul>
+    <li>Your <strong>email address</strong></li>
+    <li>A <strong>password</strong> (stored securely via AWS Cognito — we never see your password in plain text)</li>
+  </ul>
+  <p>Your SkinStream login is shared with our other suite apps (currently PackStream) — see section 5 for what that means if you delete your account.</p>
+
+  <h3>2.2 Skincare Preferences</h3>
+  <p>If you fill in your profile, we store:</p>
+  <ul>
+    <li>Skin type, and how many days a week you use retinol</li>
+    <li>Fragrance-free / sensitive-skin preferences</li>
+    <li>Ingredients you've asked to avoid (free text you enter)</li>
+    <li>Skin condition tags you add (e.g. "acne-prone", "rosacea") — tags only, general guidance framing, not a medical record</li>
+  </ul>
+
+  <h3>2.3 Routine Data</h3>
+  <p>If you build a skincare routine, we store which product (by barcode, name, and brand) you've assigned to each category on each day of your rotation.</p>
+
+  <h3>2.4 Ingredient Submissions</h3>
+  <p>If a scanned product isn't in our database, you can type in its ingredient list manually. We store what you typed, linked to your account, so we can cross-check it against other users' submissions of the same product before treating it as confirmed.</p>
+
+  <h3>2.5 Product & Ingredient Database</h3>
+  <p>Our product database (barcodes, names, brands, ingredient lists) is built from periodic bulk data imports from <a href="https://world.openbeautyfacts.org" target="_blank">Open Beauty Facts</a> (licensed under ODbL) and the EU's public CosIng ingredient reference list. We do <strong>not</strong> send your barcode scans to Open Beauty Facts or any other third party in real time — lookups are served entirely from our own database.</p>
+
+  <h3>2.6 What We Do NOT Collect</h3>
+  <ul>
+    <li>Analytics or usage tracking data</li>
+    <li>Device identifiers or advertising IDs</li>
+    <li>Photos taken by your camera — barcode scanning happens entirely on your device and no image is uploaded or stored</li>
+    <li>Crash reports or diagnostic telemetry</li>
+    <li>Payment information (the app is currently free)</li>
+  </ul>
+
+  <h2>3. How We Use Your Information</h2>
+  <p>We use the information we collect solely to:</p>
+  <ul>
+    <li>Authenticate you and secure your account</li>
+    <li>Look up scanned products and flag ingredients we can't recognise</li>
+    <li>Store and retrieve your skincare routine and preferences across devices</li>
+    <li>Improve the shared ingredient database by cross-checking multiple users' submissions for the same product</li>
+  </ul>
+  <p>We do not use your data for advertising or profiling. SkinStream does not currently include any affiliate links or third-party recommendations; if that changes, this policy will be updated first and any affiliate content will carry a clear disclosure.</p>
+
+  <h2>4. How We Share Your Information</h2>
+  <p>We do not sell, rent, or trade your personal information. We share data only with the following third-party services necessary to operate the app:</p>
+
+  <table>
+    <tr>
+      <th>Service</th>
+      <th>Purpose</th>
+      <th>Data Shared</th>
+      <th>Region</th>
+    </tr>
+    <tr>
+      <td>AWS Cognito</td>
+      <td>User authentication (shared across our apps)</td>
+      <td>Email address</td>
+      <td>Sydney, AU (ap-southeast-2)</td>
+    </tr>
+    <tr>
+      <td>AWS DynamoDB</td>
+      <td>Storing profile, routine, and submission data</td>
+      <td>Preferences, routine, ingredient submissions</td>
+      <td>Sydney, AU (ap-southeast-2)</td>
+    </tr>
+    <tr>
+      <td>AWS API Gateway + Lambda</td>
+      <td>App backend</td>
+      <td>Same as above, in transit</td>
+      <td>Sydney, AU (ap-southeast-2)</td>
+    </tr>
+  </table>
+
+  <h2>5. Account Deletion & Our Shared Login</h2>
+  <p>You can delete your SkinStream account and all associated data at any time — either instantly in the app, or by email request if you no longer have access to it. See our <a href="skinstream-delete.html">SkinStream deletion page</a> for details.</p>
+  <p><strong>Because your login is shared across our app suite</strong>, deleting your account from SkinStream also deletes your ability to sign in to PackStream (and any other app in the suite). It does not, by itself, delete data you've saved in those other apps — contact us if you'd like that data removed too.</p>
+
+  <h2>6. Data Retention</h2>
+  <ul>
+    <li><strong>Account data</strong> is retained for as long as your account is active.</li>
+    <li><strong>Profile, routine, and submission data</strong> is retained until you delete your account.</li>
+    <li>Community-sourced product/ingredient data you helped confirm is not personally identifiable once your own submission record is deleted — the underlying product data itself is shared, not your data, so it remains in the database.</li>
+  </ul>
+
+  <h2>7. Data Security</h2>
+  <ul>
+    <li>Passwords are managed by AWS Cognito and are never stored or visible to us</li>
+    <li>All data in transit is encrypted using HTTPS/TLS</li>
+    <li>AWS infrastructure is secured using industry-standard access controls</li>
+    <li>Your account data is stored in Australia</li>
+  </ul>
+  <p>No method of electronic storage or transmission is 100% secure. We cannot guarantee absolute security, but we are committed to using best practices.</p>
+
+  <h2>8. Not Medical Advice</h2>
+  <p>SkinStream provides general skincare guidance based on ingredient data and community input. It is not a substitute for professional medical or dermatological advice. Skin condition tags you add are for filtering recommendations only. Always consult a qualified professional for any skin health concern.</p>
+
+  <h2>9. Children's Privacy</h2>
+  <p>SkinStream is not directed at children under the age of 13. We do not knowingly collect personal information from children under 13. If you believe a child has provided us with personal information, please contact us and we will delete it promptly.</p>
+
+  <h2>10. Your Rights</h2>
+  <p>Depending on your location, you may have rights regarding your personal data, including:</p>
+  <ul>
+    <li><strong>Access:</strong> Request a copy of the data we hold about you</li>
+    <li><strong>Correction:</strong> Ask us to correct inaccurate data</li>
+    <li><strong>Deletion:</strong> Request deletion of your account and associated data</li>
+    <li><strong>Portability:</strong> Request your profile/routine data in a portable format</li>
+  </ul>
+  <p>To exercise any of these rights, contact us at <a href="mailto:packstreamsuite@gmail.com">packstreamsuite@gmail.com</a>.</p>
+  <p>If you are located in Australia, you may also lodge a complaint with the <a href="https://www.oaic.gov.au/" target="_blank">Office of the Australian Information Commissioner (OAIC)</a> if you believe your privacy rights have been breached.</p>
+
+  <h2>11. Changes to This Policy</h2>
+  <p>We may update this privacy policy from time to time. When we do, we will update the "Last updated" date at the top of this page. For significant changes, we will notify you within the app. Continued use of SkinStream after changes are posted constitutes your acceptance of the updated policy.</p>
+
+  <h2>12. Contact Us</h2>
+  <p>If you have any questions about this privacy policy or how we handle your data, please contact:</p>
+  <p>
+    <strong>Erick</strong><br />
+    Email: <a href="mailto:packstreamsuite@gmail.com">packstreamsuite@gmail.com</a><br />
+    Location: Melbourne, Victoria, Australia
+  </p>
+
+</body>
+</html>
