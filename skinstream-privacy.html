@@ -33,7 +33,7 @@
 <body>
 
   <h1>Privacy Policy for SkinStream</h1>
-  <p class="meta">Last updated: 26 August 2026</p>
+  <p class="meta">Last updated: 29 September 2026</p>
 
   <p>SkinStream ("we", "our", or "us") is committed to protecting your privacy. This policy explains what information we collect, how we use it, and your rights regarding that information.</p>
 
@@ -57,14 +57,24 @@
   <h3>2.2 Skincare Preferences</h3>
   <p>If you fill in your profile, we store:</p>
   <ul>
-    <li>Skin type, and how many days a week you use retinol</li>
-    <li>Fragrance-free / sensitive-skin preferences</li>
+    <li>Skin type, and which routines you do (morning, daytime, night)</li>
+    <li>Fragrance-free / sensitive-skin preferences, and whether barrier mode is on</li>
+    <li>Whether you use red light therapy (used only to show a general caution)</li>
     <li>Ingredients you've asked to avoid (free text you enter)</li>
     <li>Skin condition tags you add (e.g. "acne-prone", "rosacea") — tags only, general guidance framing, not a medical record</li>
   </ul>
 
-  <h3>2.3 Routine Data</h3>
-  <p>If you build a skincare routine, we store which product (by barcode, name, and brand) you've assigned to each category on each day of your rotation.</p>
+  <h3>2.3 Products &amp; Routine Data</h3>
+  <p>For each product you add, we store its barcode, name, brand and category, which routines and weekdays you use it in, how often you use it, and any expiry details you enter (opened date, period-after-opening, or expiry date).</p>
+
+  <h3>2.3a Routine Completion &amp; Reminder Settings</h3>
+  <ul>
+    <li><strong>Completion log:</strong> for each day, which routine steps you marked done or skipped, and any skipped items rolled into the next day. This powers streaks and periodic reviews.</li>
+    <li><strong>Reminder settings:</strong> the times and weekdays you choose for routine and sunscreen reminders. Reminders are scheduled locally on your device &mdash; we don't use a push notification service.</li>
+  </ul>
+
+  <h3>2.3b Cross-App Sharing Consent</h3>
+  <p>Because SkinStream is part of an app suite, we keep a record of whether you've allowed our other apps to access your SkinStream data. It is <strong>off by default</strong>, and we keep a log of each time you turn it on or off. No other app currently reads your SkinStream data.</p>
 
   <h3>2.4 Ingredient Submissions</h3>
   <p>If a scanned product isn't in our database, you can type in its ingredient list manually. We store what you typed, linked to your account, so we can cross-check it against other users' submissions of the same product before treating it as confirmed.</p>
@@ -76,7 +86,7 @@
   <ul>
     <li>Analytics or usage tracking data</li>
     <li>Device identifiers or advertising IDs</li>
-    <li>Photos taken by your camera — barcode scanning happens entirely on your device and no image is uploaded or stored</li>
+    <li>Photos taken by your camera — barcode scanning and ingredient-label reading happen entirely on your device and no image is uploaded or stored (only the ingredient text you confirm is saved)</li>
     <li>Crash reports or diagnostic telemetry</li>
     <li>Payment information (the app is currently free)</li>
   </ul>
@@ -87,9 +97,10 @@
     <li>Authenticate you and secure your account</li>
     <li>Look up scanned products and flag ingredients we can't recognise</li>
     <li>Store and retrieve your skincare routine and preferences across devices</li>
+    <li>Warn about ingredient conflicts, suggest missing routine basics (e.g. sunscreen), and show your streaks and reviews</li>
     <li>Improve the shared ingredient database by cross-checking multiple users' submissions for the same product</li>
   </ul>
-  <p>We do not use your data for advertising or profiling. SkinStream does not currently include any affiliate links or third-party recommendations; if that changes, this policy will be updated first and any affiliate content will carry a clear disclosure.</p>
+  <p>We do not use your data for advertising or profiling. SkinStream does not currently include affiliate links. We plan to add optional product links to routine suggestions in future; before that happens this policy will be updated, and any affiliate link will be clearly labelled.</p>
 
   <h2>4. How We Share Your Information</h2>
   <p>We do not sell, rent, or trade your personal information. We share data only with the following third-party services necessary to operate the app:</p>
@@ -110,7 +121,7 @@
     <tr>
       <td>AWS DynamoDB</td>
       <td>Storing profile, routine, and submission data</td>
-      <td>Preferences, routine, ingredient submissions</td>
+      <td>Preferences, products &amp; routine, completion log, ingredient submissions, sharing-consent record</td>
       <td>Sydney, AU (ap-southeast-2)</td>
     </tr>
     <tr>
